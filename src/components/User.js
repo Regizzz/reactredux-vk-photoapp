@@ -1,4 +1,6 @@
-import React, { PropTypes, Component } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Button } from 'react-bootstrap'
 
 export default class User extends Component {
 
@@ -7,15 +9,15 @@ export default class User extends Component {
     let template
 
     if (name) {
-      template = <p>Привет, {name}!</p>
+      template = <p>Hi, {name}!</p>
     } else {
 
-      template = <button className='btn' onClick={this.props.handleLogin}>Войти</button>
+      template = <Button className='btn btn-outlined btn-white btn-xs' data-wow-delay='0.7s' onClick={this.props.handleLogin}>Login</Button>
     }
 
-    return <div className='ib user'>
+    return <div className='user'>
       {template}
-      {error ? <p className='error'> {error}. <br /> Попробуйте еще раз.</p> : ''}
+      {error ? <p className='error'> {error}. <br /> Please, try again </p> : ''}
     </div>
   }
 }
