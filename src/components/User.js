@@ -12,7 +12,7 @@ export default class User extends Component {
       template = <p>Hi, {name}!</p>
     } else {
 
-      template = <Button className='btn btn-outlined btn-white btn-xs' data-wow-delay='0.7s' onClick={this.props.handleLogin}>Login</Button>
+      template = <Button className='btn btn-outlined btn-theme btn-xs' data-wow-delay='0.7s' onClick={this.props.handleLogin}>Login</Button>
     }
 
     return <div className='user'>
